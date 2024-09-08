@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://yqpckl4q2p5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ole57"]
+
+[resource]
+default_font_size = 22
+Button/styles/normal = SubResource("StyleBoxFlat_ole57")

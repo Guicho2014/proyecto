@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://onmk3iswu67a"]
+
+[ext_resource type="TileSet" uid="uid://b3hy3h4by6ls5" path="res://tile/new_tile_set.tres" id="1_8nqtd"]
+[ext_resource type="PackedScene" uid="uid://d0y00g55cu1h8" path="res://objetos moviles/jugador.tscn" id="2_nga2p"]
+[ext_resource type="Texture2D" uid="uid://db56a86hquhyt" path="res://icon.svg" id="4_athf4"]
+[ext_resource type="Texture2D" uid="uid://smx2oib2w7mf" path="res://obtaculos/pinchos.png" id="5_j6alq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k7x3"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_546wt"]
+size = Vector2(46, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfgm0"]
+size = Vector2(48, 12)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("1_8nqtd")
+format = 2
+layer_0/name = "suelo"
+layer_0/tile_data = PackedInt32Array(2, 262144, 5, 65538, 262144, 6, 131074, 262144, 7, 3, 327680, 5, 65539, 327680, 6, 131075, 327680, 7, 4, 393216, 5, 65540, 393216, 6, 131076, 393216, 7, 5, 458752, 5, 65541, 458752, 6, 131077, 458752, 7, -65530, 262144, 4, 6, 262144, 5, 65542, 262144, 6, 131078, 262144, 7, -65529, 327680, 4, 7, 327680, 5, 65543, 327680, 6, 131079, 327680, 7, -65528, 393216, 4, 8, 393216, 5, 65544, 393216, 6, 131080, 393216, 7, -65527, 458752, 4, 9, 458752, 5, 65545, 458752, 6, 131081, 458752, 7, -65526, 262144, 4, 10, 262144, 5, 65546, 262144, 6, 131082, 262144, 7, -65525, 327680, 4, 11, 327680, 5, 65547, 327680, 6, 131083, 327680, 7, -65524, 393216, 4, 12, 393216, 5, 65548, 393216, 6, 131084, 393216, 7, -65523, 458752, 4, 13, 458752, 5, 65549, 458752, 6, 131085, 458752, 7, -65522, 786432, 4, 14, 786432, 5, 65550, 786432, 6, 131086, 786432, 7, -65521, 851968, 4, 15, 851968, 5, 65551, 851968, 6, 131087, 851968, 7, -65520, 917504, 4, 16, 917504, 5, 65552, 917504, 6, 131088, 917504, 7, -65519, 983040, 4, 17, 983040, 5, 65553, 983040, 6, 131089, 983040, 7, -65518, 786432, 4, 18, 786432, 5, 65554, 786432, 6, 131090, 786432, 7, -65517, 851968, 4, 19, 851968, 5, 65555, 851968, 6, 131091, 851968, 7, -65516, 917504, 4, 20, 917504, 5, 65556, 917504, 6, 131092, 917504, 7, -65515, 983040, 4, 21, 983040, 5, 65557, 983040, 6, 131093, 983040, 7, 196610, 262144, 14, 262146, 262144, 15, 327682, 262144, 15, 196611, 327680, 14, 262147, 327680, 15, 327683, 327680, 15, 196612, 393216, 14, 262148, 393216, 15, 327684, 393216, 15, 196613, 458752, 14, 262149, 458752, 15, 327685, 458752, 15, -65534, 262144, 4, -65533, 327680, 4, -65532, 393216, 4, -65531, 458752, 4)
+layer_1/name = "decoracion"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(-393212, 1441792, 3, -327676, 1441792, 4, -458747, 1507328, 2, -393211, 1507328, 3, -327675, 1507328, 4, -262139, 1507328, 5, -458746, 1572864, 2, -393210, 1572864, 3, -327674, 1572864, 4, -262138, 1572864, 5, -196602, 1572864, 6, -131066, 1572864, 7, -65530, 1572864, 8, -458745, 1638400, 2, -393209, 1638400, 3, -327673, 1638400, 4, -262137, 1638400, 5, -196601, 1638400, 6, -131065, 1638400, 7, -65529, 1638400, 8, -458744, 1703936, 2, -393208, 1703936, 3, -327672, 1703936, 4, -262136, 1703936, 5, -196600, 1703936, 6, -131064, 1703936, 7, -65528, 1703936, 8, -458743, 1769472, 2, -393207, 1769472, 3, -327671, 1769472, 4, -262135, 1769472, 5, -196599, 1769472, 6, -131063, 1769472, 7, -65527, 1769472, 8, -458742, 1835008, 2, -393206, 1835008, 3, -327670, 1835008, 4, -262134, 1835008, 5, -393205, 1900544, 3, -327669, 1900544, 4)
+
+[node name="jugador" parent="." instance=ExtResource("2_nga2p")]
+position = Vector2(45, -18)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(259, -25)
+shape = SubResource("RectangleShape2D_5k7x3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(259, -25)
+scale = Vector2(0.308594, 0.316406)
+texture = ExtResource("4_athf4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(184, -13)
+scale = Vector2(2.69118, 1.125)
+texture = ExtResource("5_j6alq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(184, -8.5)
+shape = SubResource("RectangleShape2D_546wt")
+
+[node name="pinchos" type="Area2D" parent="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/pinchos"]
+position = Vector2(184, -9)
+shape = SubResource("RectangleShape2D_rfgm0")
+
+[connection signal="body_entered" from="Area2D" to="jugador" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="StaticBody2D/pinchos" to="jugador" method="_on_pinchos_body_entered"]

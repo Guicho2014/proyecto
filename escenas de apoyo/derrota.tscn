@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://bacjiqhq7fwbh"]
+
+[ext_resource type="Script" path="res://scripts/derrota.gd" id="1_rqrkq"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_rqrkq")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -190.0
+offset_top = -106.0
+offset_right = 191.0
+offset_bottom = 106.0
+color = Color(0.00784314, 0.0392157, 0.027451, 0.482353)
+
+[node name="Button" type="Button" parent="."]
+offset_left = -57.0
+offset_top = 25.0
+offset_right = 59.0
+offset_bottom = 53.0
+text = "Reiniciar"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -42.0
+offset_top = -78.0
+offset_right = 42.0
+offset_bottom = -55.0
+text = "Derrota"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
